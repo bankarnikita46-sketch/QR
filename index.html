@@ -111,7 +111,7 @@
                 </div>
                 <div class="bg-orange-50 rounded-full p-1 self-center"><img src="https://img.icons8.com/ios-glyphs/30/c2410c/expand-arrow.png" class="w-4 h-4"/></div>
             </div>
-            <div class="flex items-stretch justify-between gap-2 px-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-2">
                 <div class="bg-orange-50/50 p-3 rounded-xl text-center flex-1 border border-orange-100 relative">
                     <span class="absolute top-2 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">1</span>
                     <p class="text-[10px] mt-6 font-medium text-orange-900 leading-tight">सर्वप्रथम शीर्षकाबाबतची माहिती (ग्रामपंचायत, वर्ष इ.) भरा.</p>
@@ -247,19 +247,20 @@
 
 </div>
 
-<div class="bg-white rounded-2xl p-5 card-shadow border border-blue-200 transition-all">
+<!-- ONLY SECTION 7 IS RESPONSIVE - rest remains same -->
+<div class="bg-white rounded-2xl p-5 card-shadow border border-blue-200 transition-all upload-section">
 
-    <!-- Header -->
-    <div class="flex items-start justify-between mb-5">
+    <!-- Header - responsive flex column on mobile -->
+    <div class="flex items-start justify-between mb-5 flex-col-mobile md:flex-row md:items-center">
 
-        <div class="flex gap-4">
-            <div class="bg-blue-50 p-4 rounded-full">
+        <div class="flex gap-4 items-start">
+            <div class="bg-blue-50 p-4 rounded-full shrink-0">
                 <img src="https://img.icons8.com/ios-filled/50/2563eb/upload-to-cloud.png"
-                     class="w-7 h-7"/>
+                     class="w-7 h-7 icon-mobile"/>
             </div>
 
             <div>
-                <h3 class="text-blue-700 font-bold text-xl">
+                <h3 class="text-blue-700 font-bold text-xl title-mobile">
                     <span class="underline underline-offset-4 decoration-blue-700">7. र</span>जिस्टरची पुढे अपलोड करा
                 </h3>
 
@@ -270,19 +271,18 @@
             </div>
         </div>
 
-        <!-- View Upload Button -->
-        <button
-            class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 shadow-md">
+        <!-- View Upload Button - responsive full width on small screens -->
+        <button class="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 shadow-md button-wrap btn-full-mobile md:w-auto">
             👁 अपलोड केलेली पुढे पहा
         </button>
 
     </div>
 
     <!-- Form -->
-    <div class="border rounded-2xl p-5">
+    <div class="border rounded-2xl p-5 inner-padding-mobile">
 
-        <!-- Top Inputs -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+        <!-- Top Inputs - responsive grid: mobile 1 column, md+ 3 columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5 grid-mobile">
 
             <!-- Page Number -->
             <div>
@@ -312,7 +312,7 @@
                     फाईल प्रकार <span class="text-red-500">*</span>
                 </label>
 
-                <div class="flex gap-6 pt-3">
+                <div class="flex gap-6 pt-3 flex-wrap">
 
                     <label class="flex items-center gap-2">
                         <input type="radio" name="filetype" checked>
@@ -329,7 +329,7 @@
 
         </div>
 
-        <!-- Upload Area -->
+        <!-- Upload Area - fully responsive -->
         <div
             class="border-2 border-dashed border-gray-300 rounded-2xl p-10 text-center mb-5 bg-gray-50">
 
@@ -345,17 +345,18 @@
             </p>
 
         </div>
+        
 
-        <!-- Bottom Buttons -->
-        <div class="flex items-center justify-between">
+        <!-- Bottom Buttons - responsive wrap / full width on mobile -->
+       <div class="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
 
             <button
-                class="border border-blue-300 text-blue-700 px-5 py-2 rounded-lg font-semibold flex items-center gap-2">
+                class="border border-blue-300 text-blue-700 px-5 py-2 rounded-lg font-semibold flex items-center gap-2 btn-full-mobile sm:w-auto justify-center">
                 ⬆ फाईल निवडा
             </button>
 
             <button
-                class="bg-green-700 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-md">
+                class="bg-green-700 text-white px-5 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-md btn-full-mobile sm:w-auto justify-center">
                 ⬆ अपलोड करा
             </button>
 
@@ -363,8 +364,8 @@
 
     </div>
 
-    <!-- Footer Note -->
-    <div class="mt-5 border rounded-xl p-4 text-sm text-gray-700 bg-gray-50 flex items-center gap-2">
+    <!-- Footer Note - responsive text -->
+    <div class="mt-5 border rounded-xl p-4 text-sm text-gray-700 bg-gray-50 flex items-center gap-2 flex-wrap text-mobile-center">
         ℹ️ टीप: सर्व पुढे अपलोड केल्यानंतर 'अपलोड केलेली पुढे पहा' वर क्लिक करून खात्री तपासा.
     </div>
 
